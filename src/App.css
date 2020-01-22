@@ -1,6 +1,6 @@
 :root {
 
-  --main-color: #5ea3d0;
+  --main-color: #0a6975;
   --secondary-color: white;
   --main-text-color: #3e5869;
   --secondary-text-color: #b0c7d6;
@@ -15,6 +15,20 @@ html, body {
   font-family: system-ui;
   font-weight: 200;
   color: #3e5869
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+input[type=text]{outline:none}
+
+input{
+  width: 80%;
+  border:2px solid transparent;
+   height: 45px;
 }
 
 #root{
@@ -52,6 +66,8 @@ html, body {
 
 .send-message-form {
   grid-area: s;
+  background-color: rgb(240, 239, 239);
+  
 }
 
 .rooms-list{
@@ -61,6 +77,7 @@ html, body {
   overflow: scroll;
   height: 100%
 }
+
 
 .rooms-list ul{
   list-style-type: none;
@@ -81,11 +98,14 @@ html, body {
   color: var(--secondary-text-color);
   font-weight: 600;
   text-decoration: none;
+  
 }
 
 .rooms-list .room.active a{
-  color: var(--secondary-color)
+  color: var(--secondary-color);
+  text-decoration: none;
 }
+
 
 .join-room{
   color: var(--main-text-color);
@@ -93,11 +113,38 @@ html, body {
   margin: 20% 0% 0% 28%;
 }
 
-input{
-  width: 80%;
-  border:2px solid transparent;
+
+.message-list{
+  box-sizing: border-box;
+  padding: 10px;
   background-color: white;
-  height: 45px;
+  overflow: scroll;
+  height: 100%;
+
+}
+
+.send-message-form input{
+  background-color: rgb(240, 239, 239);
+  width: 99.5%;
+}
+
+.message-text{
+  border: 5px solid var(--main-color);
+  border-left-width:15px;
+  border-right-width: 15px;
+  height: 28px;
+  border-radius: 10px; 
+  width: fit-content;
+  background-color: var(--main-color) ;
+  margin-top: 2px;
+  color: white
+  
+ 
+    
+}
+
+.message-username{
+  margin-top: 10px;
 }
 
 ::placeholder{
@@ -107,4 +154,5 @@ input{
 button{
   border:2px solid transparent;
   background-color: white;
+  cursor: pointer;
 }
